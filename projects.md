@@ -27,6 +27,7 @@ This repository is to keep tracks of all work done on the stream (aka [https://w
 - [NoteBookmark](#NoteBookmark)
 - [Not-a-Dog-Workshop](#not-a-dog-workshop)
 - [Reading Notes](#readingnotes)
+- [Reka.SDK for .NET](#reka-sdk-dotnet)
 - [TinyBlazorAdmin](#tinyblazoradmin)
 - [Triavia the Trivia game](#triavia)
 - [Use-R-Vote (aka outspoken)](#use-r-vote)
@@ -538,6 +539,32 @@ CheckInDoc MCP, is a MCP server to check/ search in the specific documentation w
 </table>
 
 
+
+
+---
+
+<h3 id="reka-sdk-dotnet">Reka.SDK for .NET</h3>[🔝](#reka-sdk-dotnet)
+
+Official .NET SDK for integrating Reka AI APIs into your .NET applications.
+
+ 🔗 [http://github.com/reka-ai/reka-sdk-dotnet](http://github.com/reka-ai/reka-sdk-dotnet)
+
+<table>
+  <thead>
+    <tr>
+      <th style="width:90px">Date</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+    {% for post in site.categories["reka-sdk-dotnet"] %}
+    <tr>
+        <td> {{ post.date | date: "%F" }} </td>
+        <td> 
+            <a href="{{ post.url | relative_url }}" class="post-link"> {{ post.title }} </a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
 
 
 
