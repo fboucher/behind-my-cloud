@@ -21,6 +21,7 @@ This repository is to keep tracks of all work done on the stream (aka [https://w
 - [Blind2021 (aka Project Dover)](#blind2021)
 - [CheckInDoc MCP](#check-in-doc-mcp)
 - [CloudBot](#cloudbot)
+- [Frame Fisher](#frame-fisher)
 - [Learning](#learning)
 - [OSS Maintenance](#maintenance)
 - [MyClippings-Parser](#myclippings-parser)
@@ -557,6 +558,33 @@ Official .NET SDK for integrating Reka AI APIs into your .NET applications.
     </tr>
   </thead>
     {% for post in site.categories["reka-sdk-dotnet"] %}
+    <tr>
+        <td> {{ post.date | date: "%F" }} </td>
+        <td> 
+            <a href="{{ post.url | relative_url }}" class="post-link"> {{ post.title }} </a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+
+---
+
+<h3 id="frame-fisher">Frame Fisher</h3>[🔝](#frame-fisher)
+
+App that search across multiple videos using AI.
+
+ 🔗 [http://github.com/reka-ai/frame-fisher](http://github.com/fboucher/frame-fisher)
+
+<table>
+  <thead>
+    <tr>
+      <th style="width:90px">Date</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+    {% for post in site.categories["frame-fisher"] %}
     <tr>
         <td> {{ post.date | date: "%F" }} </td>
         <td> 
