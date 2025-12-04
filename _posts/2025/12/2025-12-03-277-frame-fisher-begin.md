@@ -2,7 +2,7 @@
 layout: post
 title: Building an app to search across videos using AI (stream 277)
 featured-image: https://img.youtube.com/vi/HFxUKrPWqxE/hqdefault.jpg
-date: 2025-12-04  06:30 -0500
+date: 2025-12-03  06:30 -0500
 categories:  frame-fisher
 ---
 
