@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Building an app to search across videos using AI (part 2) (stream 222)
+title: Building an app to search across videos using AI (part 2) (stream 278)
 featured-image: https://img.youtube.com/vi/dK2jzZsWboc/hqdefault.jpg
 date: 2025-12-05  06:30 -0500
 categories:  frame-fisher
