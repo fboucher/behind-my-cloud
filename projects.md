@@ -25,6 +25,7 @@ This repository is to keep tracks of all work done on the stream (aka [https://w
 - [Learning](#learning)
 - [OSS Maintenance](#maintenance)
 - [MyClippings-Parser](#myclippings-parser)
+- [n8n-nodes-reka](#n8n-nodes-reka)
 - [NoteBookmark](#NoteBookmark)
 - [Not-a-Dog-Workshop](#not-a-dog-workshop)
 - [Reading Notes](#readingnotes)
@@ -575,7 +576,7 @@ Official .NET SDK for integrating Reka AI APIs into your .NET applications.
 
 App that search across multiple videos using AI.
 
- 🔗 [http://github.com/reka-ai/frame-fisher](http://github.com/fboucher/frame-fisher)
+ 🔗 [http://github.com/fboucher/frame-fisher](http://github.com/fboucher/frame-fisher)
 
 <table>
   <thead>
@@ -585,6 +586,34 @@ App that search across multiple videos using AI.
     </tr>
   </thead>
     {% for post in site.categories["frame-fisher"] %}
+    <tr>
+        <td> {{ post.date | date: "%F" }} </td>
+        <td> 
+            <a href="{{ post.url | relative_url }}" class="post-link"> {{ post.title }} </a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+
+
+---
+
+<h3 id="n8n-nodes-reka">n8n Nodes Reka</h3>[🔝](#n8n-nodes-reka)
+
+Custom n8n nodes to use Reka's AI in our workflows.
+
+ 🔗 [http://github.com/fboucher/n8n-nodes-reka](http://github.com/fboucher/n8n-nodes-reka)
+
+<table>
+  <thead>
+    <tr>
+      <th style="width:90px">Date</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+    {% for post in site.categories["n8n-nodes-reka"] %}
     <tr>
         <td> {{ post.date | date: "%F" }} </td>
         <td> 
