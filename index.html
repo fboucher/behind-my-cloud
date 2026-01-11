@@ -4,19 +4,21 @@ layout: default
 
 <div class="home">
 
-  <!--h1 class="page-heading">Posts</h1-->
-
   <ul class="post-list" style="list-style-type:none;">
     {% for post in paginator.posts %}
-      <li>
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.url }}">{{ post.title }}</a>
+      <li class="post">
+        <h2 class="post-title">
+          <a href="{{ post.url | prepend: site.url }}">{{ post.title }}</a>
         </h2>
-          <span class="post-meta">{{ post.date | date: "%F" }}</span>
-          {{ post.excerpt }}<a href="{{ post.url }}">Read more...</a><br><br>
+        <div class="post-meta">
+          <span>📅 {{ post.date | date: "%B %d, %Y" }}</span>
+        </div>
+        <div class="post-excerpt">
+          {{ post.excerpt }}
+        </div>
+        <a href="{{ post.url }}" class="read-more">Read more...</a>
       </li>
     {% endfor %}
-    
   </ul>
 
   <hr />
@@ -24,17 +26,20 @@ layout: default
   <!-- Pagination links -->
   <div class="pagination">
     {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | relative_url }}" class="previous">Previous</a>
+      <a href="{{ paginator.previous_page_path | relative_url }}" class="previous">← Previous</a>
     {% else %}
-      <span class="previous">Previous</span>
+      <span class="previous disabled">← Previous</span>
     {% endif %}
-    <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    <span class="page_number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
     {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | relative_url }}" class="next">Next</a>
+      <a href="{{ paginator.next_page_path | relative_url }}" class="next">Next →</a>
     {% else %}
-      <span class="next ">Next</span>
+      <span class="next disabled">Next →</span>
     {% endif %}
   </div>
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.url }}">via RSS</a></p>
+  
+  <p class="rss-subscribe" style="text-align: center; margin-top: 2rem;">
+    Subscribe <a href="{{ "/feed.xml" | prepend: site.url }}">via RSS</a>
+  </p>
 
 </div>
