@@ -4,7 +4,17 @@
 !.vscode/launch.json
 !.vscode/extensions.json
 
-
 # generated files
-_site/*
-.vscode/settings.json
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# dependencies
+vendor/
+.bundle/
+Gemfile.lock
+
+# OS files
+.DS_Store
+Thumbs.db
