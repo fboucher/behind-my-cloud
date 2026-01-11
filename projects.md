@@ -131,7 +131,7 @@ permalink: /projects/
 <div class="project-card" id="blind2021">
   <h3>Blind2021 (aka Project Dover) <a href="#projectlist" style="font-size: 0.875rem; float: right;">🔝</a></h3>
 
-  <p>Text-based adventure game, in a near future where you and your glasses companion are exploring your environment. Base on the ProjectDover. Using AI to simplify commands (talk humans AI translate to game commands)</p>
+  <p>Text-based adventure game, in a near future where you and your glasses companion are exploring your environment. Based on the ProjectDover. Using AI to simplify commands (talk humans AI translate to game commands)</p>
 
   <img src="https://github.com/FBoucher/ProjectDover/raw/master/medias/Text-Based-Game_800.png" alt="Blind2021 cover" style="width: 100%; max-width: 500px; border-radius: 12px; margin: 1rem 0;"/>
 
@@ -301,7 +301,7 @@ permalink: /projects/
 </div><div class="project-card" id="azunzipeverything">
   <h3>AzUnzipEverything <a href="#projectlist" style="font-size: 0.875rem; float: right;">🔝</a></h3>
 
-  <p>A simple Azure Function to Unzip files from a blob storage container to another one The following features are supported in this current version: 1. Supported Archive Types: .zip, .rar *Archive support is currently implemented using the <a href="https://github.com/adamhathcock/sharpcompress">sharpcompress</a> library* 2. Password protetected zip files *The current solution provisions an Azure KeyVault instance for storing the zip archive(s) password used during the unzipping process. If password protected zip files are uploaded to the blob storage container, this would be the password used when attempting to un-zip the files into the destination storage container.**</p>
+  <p>A simple Azure Function to Unzip files from a blob storage container to another one The following features are supported in this current version: 1. Supported Archive Types: .zip, .rar *Archive support is currently implemented using the <a href="https://github.com/adamhathcock/sharpcompress">sharpcompress</a> library* 2. Password protected zip files *The current solution provisions an Azure KeyVault instance for storing the zip archive(s) password used during the unzipping process. If password protected zip files are uploaded to the blob storage container, this would be the password used when attempting to un-zip the files into the destination storage container.**</p>
   <div class="project-links">
     <a href="https://github.com/FBoucher/AzUnzipEverything" class="project-link">🔗 GitHub Repository</a>
   </div>
@@ -430,7 +430,7 @@ permalink: /projects/
 
   <p><a href="https://drgames.co.uk/2d6-dungeon-a-classic-dungeon-crawler-solo-player-game/">2D6 Dungeon</a> is a classic style dungeon crawler, print and play, roll and write game designed for solo play. You explore randomly generated dungeon rooms, fight monsters and collect treasure as you gain experience and strive to become a legendary adventurer. Every adventure and dungeon is unique. It was created by DR Games and it's a paper and dices game.</p>
 
-  <p>This project is a digital version of the game, with creator's approval. It's a web application that allows you to play the game on your computer or mobile device. It's a work in progress. I progress by iteration improving the code, the structure at each passes.</p>
+  <p>This project is a digital version of the game, with creator's approval. It's a web application that allows you to play the game on your computer or mobile device. It's a work in progress. I progress by iteration improving the code, the structure at each pass.</p>
 
   <img src="https://raw.githubusercontent.com/FBoucher/2d6-dungeon-app/main/medias/new_adventure.png" alt="2D6 Dungeon App new adventure screen" style="width: 100%; max-width: 500px; border-radius: 12px; margin: 1rem 0;"/>
 
