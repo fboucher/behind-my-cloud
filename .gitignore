@@ -5,10 +5,15 @@
 !.vscode/extensions.json
 
 # generated files
-_site/
+_site/*
+.vscode/settings.json
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
+vendor/
+vendor/bundle/
+tmp/
+tmp/**
 
 # dependencies
 vendor/
