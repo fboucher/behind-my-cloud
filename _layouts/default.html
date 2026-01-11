@@ -5,10 +5,23 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,maximum-scale=2">
-    <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <link rel="stylesheet" href='{{ "/css/bmc.css" | prepend: site.url }}'>
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ '/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
 {% seo %}
+    <script>
+      // Initialize theme preference
+      (function() {
+        const htmlElement = document.documentElement;
+        const themePref = localStorage.getItem('theme-preference') || 'auto';
+        const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        if (themePref === 'dark' || (themePref === 'auto' && isDark)) {
+          htmlElement.setAttribute('data-theme', 'dark');
+        } else {
+          htmlElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
   </head>
 
   <body>
@@ -57,13 +70,50 @@
         ga('send', 'pageview');
       </script>
     {% endif %}
-  </body>
 
-  <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
-  <script>addBackToTop({
-    diameter: 56,
-    onClickScrollTo: 100, 
-    backgroundColor: '#07f',
-    textColor: '#fff'
-  })</script>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+      <span id="theme-icon">🌙</span>
+    </button>
+
+    <!-- Theme Switching Script -->
+    <script>
+      const htmlElement = document.documentElement;
+      const themeToggle = document.getElementById('theme-toggle');
+      const themeIcon = document.getElementById('theme-icon');
+
+      function updateThemeIcon() {
+        const currentTheme = htmlElement.getAttribute('data-theme');
+        themeIcon.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+      }
+
+      function setTheme(theme) {
+        if (theme === 'auto') {
+          htmlElement.removeAttribute('data-theme');
+          localStorage.setItem('theme-preference', 'auto');
+        } else {
+          htmlElement.setAttribute('data-theme', theme);
+          localStorage.setItem('theme-preference', theme);
+        }
+        updateThemeIcon();
+      }
+
+      themeToggle.addEventListener('click', function() {
+        const currentTheme = htmlElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        setTheme(newTheme);
+      });
+
+      // Initialize icon
+      updateThemeIcon();
+    </script>
+
+    <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
+    <script>addBackToTop({
+      diameter: 56,
+      onClickScrollTo: 100, 
+      backgroundColor: 'var(--color-primary)',
+      textColor: '#fff'
+    })</script>
+  </body>
 </html>

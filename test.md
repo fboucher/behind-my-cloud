@@ -6,6 +6,11 @@ permalink: /test/
 
 <!--
 
+bundle install
+or 
+bundle install --redownload
+
+
 bundle exec jekyll serve
 
 
