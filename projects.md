@@ -25,6 +25,7 @@ This repository is to keep tracks of all work done on the stream (aka [https://w
 - [Learning](#learning)
 - [OSS Maintenance](#maintenance)
 - [MyClippings-Parser](#myclippings-parser)
+- [My GPX Activities](#my-gpx-activities)
 - [n8n-nodes-reka](#n8n-nodes-reka)
 - [NoteBookmark](#NoteBookmark)
 - [Not-a-Dog-Workshop](#not-a-dog-workshop)
@@ -624,6 +625,32 @@ Custom n8n nodes to use Reka's AI in our workflows.
 </table>
 
 
+
+
+---
+
+<h3 id="my-gpx-activities">my GPX Activities</h3>[🔝](#nmy-gpx-activities)
+
+A Personal GPX website to visualize your outdoor activities.
+
+ 🔗 [http://github.com/fboucher/my-gpx-activities](http://github.com/fboucher/my-gpx-activities)
+
+<table>
+  <thead>
+    <tr>
+      <th style="width:90px">Date</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+    {% for post in site.categories["my-gpx-activities"] %}
+    <tr>
+        <td> {{ post.date | date: "%F" }} </td>
+        <td> 
+            <a href="{{ post.url | relative_url }}" class="post-link"> {{ post.title }} </a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
 
 
 [Stream_Screenshots]: /medias/Stream_Screenshots.png
