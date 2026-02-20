@@ -1,6 +1,6 @@
 ---
 layout: post
-title: NoteBookmark (stream 395)
+title: AI Wednesday - Let's work on... (stream 395)
 featured-image: https://img.youtube.com/vi/VKvwRBNRbiA/hqdefault.jpg
 date: 2026-02-18  06:30 -0500
 categories:  NoteBookmark
@@ -16,7 +16,7 @@ Today's stream was a bit disorganized to start with, but we managed to work on s
 ## Replay
 
 {% include youtube.html id="VKvwRBNRbiA" %}
-
+  
 <br/><!--more-->
 
 ### Project
