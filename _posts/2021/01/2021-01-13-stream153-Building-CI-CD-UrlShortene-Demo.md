@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Stream 153 - Building a CI/CD for UrlShortener demo from GitHUb to Azure"
-date: 2021-01-13
-categories:azurlshortener
+date: 2021-01-13  06:30 -0500
+categories: azurlshortener
 ---
 
 ## Summary
