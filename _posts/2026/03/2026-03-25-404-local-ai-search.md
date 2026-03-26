@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Take 2: Working on local-ai-search project
+title: Take 2 - Working on local-ai-search project
 featured-image: https://img.youtube.com/vi/p--kMaqjl3k/hqdefault.jpg
 date: 2026-03-25  06:30 -0500
 categories:  local-ai-search
