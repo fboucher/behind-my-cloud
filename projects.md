@@ -23,6 +23,7 @@ This repository is to keep tracks of all work done on the stream (aka [https://w
 - [CloudBot](#cloudbot)
 - [Frame Fisher](#frame-fisher)
 - [Learning](#learning)
+- [Local AI Search](#local-ai-search)
 - [OSS Maintenance](#maintenance)
 - [MyClippings-Parser](#myclippings-parser)
 - [My GPX Activities](#my-gpx-activities)
@@ -629,7 +630,7 @@ Custom n8n nodes to use Reka's AI in our workflows.
 
 ---
 
-<h3 id="my-gpx-activities">my GPX Activities</h3>[🔝](#nmy-gpx-activities)
+<h3 id="my-gpx-activities">my GPX Activities</h3>[🔝](#my-gpx-activities)
 
 A Personal GPX website to visualize your outdoor activities.
 
@@ -651,6 +652,34 @@ A Personal GPX website to visualize your outdoor activities.
     </tr>
     {% endfor %}
 </table>
+
+
+---
+
+<h3 id="local-ai-search">Local AI Search</h3>[🔝](#local-ai-search)
+
+A project to manage medias (images & videos) locally using AI.
+
+ 🔗 [http://github.com/fboucher/local-ai-search](http://github.com/fboucher/local-ai-search)
+
+<table>
+  <thead>
+    <tr>
+      <th style="width:90px">Date</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+    {% for post in site.categories["local-ai-search"] %}
+    <tr>
+        <td> {{ post.date | date: "%F" }} </td>
+        <td> 
+            <a href="{{ post.url | relative_url }}" class="post-link"> {{ post.title }} </a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+
 
 
 [Stream_Screenshots]: /medias/Stream_Screenshots.png
