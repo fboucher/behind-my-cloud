@@ -82,80 +82,83 @@
         ga('send', 'pageview');
       </script>
     {% endif %}
+
+    <script>
+      function toggleThemeMenu(event) {
+        event.stopPropagation();
+        document.getElementById('theme-content').classList.toggle('active');
+      }
+
+      function setTheme(theme) {
+        document.body.classList.remove('theme-retro', 'theme-cloudy', 'theme-terminal');
+        document.body.classList.add('theme-' + theme);
+        localStorage.setItem('selected-theme', theme);
+
+        // Mascot swap logic
+        const mascot = document.getElementById('mascot-img');
+        if (theme === 'retro') {
+          mascot.src = '/medias/ceebee_surprised.png';
+        } else if (theme === 'terminal') {
+          mascot.src = '/medias/hicloud.png';
+        } else {
+          mascot.src = '/medias/ceebee.png';
+        }
+
+        // Close menu after selection
+        const content = document.getElementById('theme-content');
+        if (content) content.classList.remove('active');
+      }
+
+      function toggleMode() {
+        const isDark = document.body.classList.contains('mode-dark');
+        if (isDark) {
+          document.body.classList.remove('mode-dark');
+          document.body.classList.add('mode-light');
+          localStorage.setItem('selected-mode', 'light');
+          document.getElementById('mode-toggle').innerText = '🌙 Dark Mode';
+        } else {
+          document.body.classList.remove('mode-light');
+          document.body.classList.add('mode-dark');
+          localStorage.setItem('selected-mode', 'dark');
+          document.getElementById('mode-toggle').innerText = '☀️ Light Mode';
+        }
+      }
+
+      // Close menu when clicking anywhere else
+      document.addEventListener('click', function(event) {
+        const panel = document.getElementById('theme-panel');
+        if (panel && !panel.contains(event.target)) {
+          const content = document.getElementById('theme-content');
+          if (content) content.classList.remove('active');
+        }
+      });
+
+      // Initialize
+      (function() {
+        const savedTheme = localStorage.getItem('selected-theme') || 'cloudy';
+        const savedMode = localStorage.getItem('selected-mode') || 'light';
+        
+        setTheme(savedTheme);
+        if (savedMode === 'dark') {
+          document.body.classList.add('mode-dark');
+          document.body.classList.remove('mode-light');
+          const toggleBtn = document.getElementById('mode-toggle');
+          if (toggleBtn) toggleBtn.innerText = '☀️ Light Mode';
+        } else {
+          document.body.classList.add('mode-light');
+          document.body.classList.remove('mode-dark');
+          const toggleBtn = document.getElementById('mode-toggle');
+          if (toggleBtn) toggleBtn.innerText = '🌙 Dark Mode';
+        }
+      })();
+    </script>
+
+    <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
+    <script>addBackToTop({
+      diameter: 56,
+      onClickScrollTo: 100, 
+      backgroundColor: '#07f',
+      textColor: '#fff'
+    })</script>
   </body>
-
-  <script>
-    function setTheme(theme) {
-      document.body.classList.remove('theme-retro', 'theme-cloudy', 'theme-terminal');
-      document.body.classList.add('theme-' + theme);
-      localStorage.setItem('selected-theme', theme);
-
-      // Mascot swap logic
-      const mascot = document.getElementById('mascot-img');
-      if (theme === 'retro') {
-        mascot.src = '/medias/ceebee_surprised.png';
-      } else if (theme === 'terminal') {
-        mascot.src = '/medias/hicloud.png';
-      } else {
-        mascot.src = '/medias/ceebee.png';
-      }
-    }
-
-    function toggleMode() {
-      const isDark = document.body.classList.contains('mode-dark');
-      if (isDark) {
-        document.body.classList.remove('mode-dark');
-        document.body.classList.add('mode-light');
-        localStorage.setItem('selected-mode', 'light');
-        document.getElementById('mode-toggle').innerText = '🌙 Dark Mode';
-      } else {
-        document.body.classList.remove('mode-light');
-        document.body.classList.add('mode-dark');
-        localStorage.setItem('selected-mode', 'dark');
-        document.getElementById('mode-toggle').innerText = '☀️ Light Mode';
-      }
-    }
-
-    // Initialize
-    (function() {
-      const savedTheme = localStorage.getItem('selected-theme') || 'cloudy';
-      const savedMode = localStorage.getItem('selected-mode') || 'light';
-      
-      setTheme(savedTheme);
-      if (savedMode === 'dark') {
-        document.body.classList.add('mode-dark');
-        document.body.classList.remove('mode-light');
-        document.getElementById('mode-toggle').innerText = '☀️ Light Mode';
-      } else {
-        document.body.classList.add('mode-light');
-        document.body.classList.remove('mode-dark');
-        document.getElementById('mode-toggle').innerText = '🌙 Dark Mode';
-      }
-    })();
-  </script>
-
-  <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
-  <script>addBackToTop({
-    diameter: 56,
-    onClickScrollTo: 100, 
-    backgroundColor: '#07f',
-    textColor: '#fff'
-  })</script>
-</html>
-gle').innerText = '☀️ Light Mode';
-      } else {
-        document.body.classList.add('mode-light');
-        document.body.classList.remove('mode-dark');
-        document.getElementById('mode-toggle').innerText = '🌙 Dark Mode';
-      }
-    })();
-  </script>
-
-  <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
-  <script>addBackToTop({
-    diameter: 56,
-    onClickScrollTo: 100, 
-    backgroundColor: '#07f',
-    textColor: '#fff'
-  })</script>
 </html>
