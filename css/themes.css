@@ -320,17 +320,44 @@ a {
 /* Navbar overrides */
 ul.navbar {
     background-color: transparent !important;
-    border: var(--border-style);
-    border-radius: var(--border-radius);
+    border: none !important;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+ul.navbar li {
+    float: none !important; /* Reset old float */
 }
 
 ul.navbar li a {
     color: var(--text-color) !important;
+    font-family: var(--heading-font);
+    text-transform: uppercase;
+    font-size: 0.9em;
+    padding: 10px 15px !important;
+    border-radius: var(--border-radius);
+    transition: all 0.2s;
 }
 
-ul.navbar li.active, ul.navbar li a:hover {
+ul.navbar li.active a, ul.navbar li a:hover {
     background-color: var(--accent-color) !important;
-    color: white !important;
+    color: #fff !important;
+}
+
+/* Theme specific Navbar tweaks */
+.theme-retro ul.navbar li a {
+    border: 2px solid transparent;
+}
+.theme-retro ul.navbar li a:hover {
+    border: 2px solid var(--text-color);
+}
+
+.theme-terminal ul.navbar li a {
+    border: 1px solid transparent;
+}
+.theme-terminal ul.navbar li a:hover {
+    border: 1px solid var(--accent-color);
 }
 
 #theNavbar {
