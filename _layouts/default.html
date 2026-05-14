@@ -23,8 +23,8 @@
 
     <!-- THEME SWITCHER -->
     <div id="theme-panel">
-      <div class="panel-toggle">🎨</div>
-      <div class="panel-content">
+      <div class="panel-toggle" onclick="toggleThemeMenu(event)">🎨</div>
+      <div id="theme-content" class="panel-content">
         <h4>Design Style</h4>
         <button onclick="setTheme('retro')">🕹️ Retro</button>
         <button onclick="setTheme('cloudy')">☁️ Cloudy</button>
@@ -126,6 +126,23 @@
         document.body.classList.add('mode-dark');
         document.body.classList.remove('mode-light');
         document.getElementById('mode-toggle').innerText = '☀️ Light Mode';
+      } else {
+        document.body.classList.add('mode-light');
+        document.body.classList.remove('mode-dark');
+        document.getElementById('mode-toggle').innerText = '🌙 Dark Mode';
+      }
+    })();
+  </script>
+
+  <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
+  <script>addBackToTop({
+    diameter: 56,
+    onClickScrollTo: 100, 
+    backgroundColor: '#07f',
+    textColor: '#fff'
+  })</script>
+</html>
+gle').innerText = '☀️ Light Mode';
       } else {
         document.body.classList.add('mode-light');
         document.body.classList.remove('mode-dark');
