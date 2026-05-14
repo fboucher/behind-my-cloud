@@ -20,11 +20,32 @@
 }
 
 .theme-cloudy.mode-dark {
-    --bg-color: #0f172a;
-    --text-color: #e2e8f0;
-    --header-bg: linear-gradient(135deg, #1e293b, #334155);
-    --card-bg: rgba(30, 41, 59, 0.7);
-    --box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    --bg-color: #020617; /* Deepest blue/black */
+    --text-color: #f1f5f9;
+    --header-bg: #0f172a;
+    --footer-bg: #020617;
+    --card-bg: rgba(15, 23, 42, 0.9);
+    --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Cloudy Navbar Fix */
+.theme-cloudy ul.navbar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    border: none;
+    background: transparent !important;
+}
+
+.theme-cloudy ul.navbar li a {
+    border-radius: 20px;
+    padding: 8px 20px !important;
+    background: rgba(0, 119, 255, 0.1);
+    transition: all 0.2s;
+}
+
+.theme-cloudy.mode-dark ul.navbar li a {
+    background: rgba(255, 255, 255, 0.05);
 }
 
 /* --- RETRO PIXEL THEME --- */
@@ -43,8 +64,12 @@
 }
 
 .theme-retro.mode-dark {
+    --bg-color: #000000;
+    --card-bg: #0a0a0a;
+    --header-bg: #050505;
     --accent-color: #ff00ff;
-    --border-style: 4px solid #ff00ff;
+    --text-color: #ff00ff;
+    --border-style: 2px solid #ff00ff;
 }
 
 /* --- TERMINAL THEME --- */
@@ -70,21 +95,40 @@
     --accent-color: #2563eb;
 }
 
+.theme-terminal.mode-dark {
+    --bg-color: #0d0d0d;
+    --card-bg: #121212;
+    --header-bg: #000000;
+    --text-color: #00ff41; /* Classic Matrix green */
+    --accent-color: #00ff41;
+    --border-style: 1px solid #00ff41;
+}
+
 /* --- MASCOT STYLING --- */
 #mascot-container {
     float: left;
     margin-right: 20px;
     width: 80px;
     height: 80px;
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+    padding: 0 !important;
 }
 
 #mascot-img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+    display: block;
 }
 
 /* Cloudy Mascot Animation */
@@ -234,6 +278,11 @@ body {
     margin-top: 20px;
 }
 
+.mode-dark #main_content {
+    background: var(--card-bg);
+    border: var(--border-style);
+}
+
 h1, h2, h3, h4, h5, h6 {
     color: var(--text-color) !important;
     font-family: var(--heading-font) !important;
@@ -242,6 +291,10 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
     color: var(--accent-color) !important;
+}
+
+a:hover {
+    filter: brightness(1.2);
 }
 
 /* --- THEME SWITCHER UI --- */
@@ -255,33 +308,38 @@ a {
 .panel-toggle {
     background: var(--accent-color);
     color: white;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    font-size: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    font-size: 24px;
+    transition: transform 0.2s, background-color 0.2s;
 }
 
-#theme-panel:hover .panel-content {
-    display: block;
+.panel-toggle:hover {
+    transform: scale(1.1);
 }
 
 .panel-content {
-    display: none;
+    display: none; /* Controlled by JS class 'active' */
     position: absolute;
-    top: 50px;
+    top: 55px;
     right: 0;
     background: var(--card-bg);
-    backdrop-filter: blur(10px);
-    border: var(--border-style);
-    border-radius: 8px;
+    backdrop-filter: blur(20px);
+    border: 2px solid var(--accent-color);
+    border-radius: 12px;
     padding: 15px;
-    min-width: 150px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    min-width: 180px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.panel-content.active {
+    display: block;
 }
 
 .panel-content h4 {
