@@ -382,13 +382,18 @@ ul.navbar {
     display: flex;
     justify-content: flex-end;
     margin-top: 10px;
+    overflow: visible !important;
 }
 
 ul.navbar li {
     float: none !important; /* Reset old float */
 }
 
-ul.navbar li a {
+.navbarItem, ul.navbar li a {
+    display: inline-block !important;
+    width: auto !important; /* Remove fixed 45px width */
+    height: auto !important; /* Remove fixed 20px height */
+    overflow: visible !important;
     color: var(--text-color) !important;
     font-family: var(--heading-font);
     text-transform: uppercase;
@@ -396,6 +401,8 @@ ul.navbar li a {
     padding: 10px 15px !important;
     border-radius: var(--border-radius);
     transition: all 0.2s;
+    text-align: center;
+    line-height: normal !important;
 }
 
 ul.navbar li.active a, ul.navbar li a:hover {
