@@ -5,17 +5,42 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,maximum-scale=2">
+    
+    <!-- Google Fonts for Themes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Press+Start+2P&family=Quicksand:wght@300;500;700&family=VT323&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" href='{{ "/css/bmc.css" | prepend: site.url }}'>
+    <link rel="stylesheet" href='{{ "/css/themes.css" | prepend: site.url }}'>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
 {% seo %}
   </head>
 
-  <body>
+  <body class="theme-cloudy mode-light"> <!-- Defaults -->
+    <div id="retro-scanlines"></div>
+
+    <!-- THEME SWITCHER -->
+    <div id="theme-panel">
+      <div class="panel-toggle">🎨</div>
+      <div class="panel-content">
+        <h4>Design Style</h4>
+        <button onclick="setTheme('retro')">🕹️ Retro</button>
+        <button onclick="setTheme('cloudy')">☁️ Cloudy</button>
+        <button onclick="setTheme('terminal')">💻 Terminal</button>
+        <hr>
+        <h4>Appearance</h4>
+        <button id="mode-toggle" onclick="toggleMode()">🌙 Dark Mode</button>
+      </div>
+    </div>
 
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
+          <div id="mascot-container">
+            <img id="mascot-img" src="/medias/ceebee.png" alt="CeeBee Mascot">
+          </div>
           {% if site.github.is_project_page %}
             <a id="forkme_banner" href="{{ site.github.repository_url }}">View on GitHub</a>
           {% endif %}
@@ -58,6 +83,56 @@
       </script>
     {% endif %}
   </body>
+
+  <script>
+    function setTheme(theme) {
+      document.body.classList.remove('theme-retro', 'theme-cloudy', 'theme-terminal');
+      document.body.classList.add('theme-' + theme);
+      localStorage.setItem('selected-theme', theme);
+
+      // Mascot swap logic
+      const mascot = document.getElementById('mascot-img');
+      if (theme === 'retro') {
+        mascot.src = '/medias/ceebee_surprised.png';
+      } else if (theme === 'terminal') {
+        mascot.src = '/medias/hicloud.png';
+      } else {
+        mascot.src = '/medias/ceebee.png';
+      }
+    }
+
+    function toggleMode() {
+      const isDark = document.body.classList.contains('mode-dark');
+      if (isDark) {
+        document.body.classList.remove('mode-dark');
+        document.body.classList.add('mode-light');
+        localStorage.setItem('selected-mode', 'light');
+        document.getElementById('mode-toggle').innerText = '🌙 Dark Mode';
+      } else {
+        document.body.classList.remove('mode-light');
+        document.body.classList.add('mode-dark');
+        localStorage.setItem('selected-mode', 'dark');
+        document.getElementById('mode-toggle').innerText = '☀️ Light Mode';
+      }
+    }
+
+    // Initialize
+    (function() {
+      const savedTheme = localStorage.getItem('selected-theme') || 'cloudy';
+      const savedMode = localStorage.getItem('selected-mode') || 'light';
+      
+      setTheme(savedTheme);
+      if (savedMode === 'dark') {
+        document.body.classList.add('mode-dark');
+        document.body.classList.remove('mode-light');
+        document.getElementById('mode-toggle').innerText = '☀️ Light Mode';
+      } else {
+        document.body.classList.add('mode-light');
+        document.body.classList.remove('mode-dark');
+        document.getElementById('mode-toggle').innerText = '🌙 Dark Mode';
+      }
+    })();
+  </script>
 
   <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
   <script>addBackToTop({

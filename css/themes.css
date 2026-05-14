@@ -1,0 +1,342 @@
+/* THEME SYSTEM CORE */
+:root {
+    --transition-speed: 0.3s;
+}
+
+/* --- CLOUDY THEME (Default) --- */
+.theme-cloudy {
+    --bg-color: #f0f7ff;
+    --text-color: #2c3e50;
+    --header-bg: linear-gradient(135deg, #0077ff, #00d4ff);
+    --footer-bg: #2c3e50;
+    --accent-color: #0077ff;
+    --card-bg: rgba(255, 255, 255, 0.8);
+    --border-radius: 15px;
+    --font-main: 'Quicksand', sans-serif;
+    --heading-font: 'Quicksand', sans-serif;
+    --border-style: none;
+    --box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    --glass-blur: blur(8px);
+}
+
+.theme-cloudy.mode-dark {
+    --bg-color: #0f172a;
+    --text-color: #e2e8f0;
+    --header-bg: linear-gradient(135deg, #1e293b, #334155);
+    --card-bg: rgba(30, 41, 59, 0.7);
+    --box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* --- RETRO PIXEL THEME --- */
+.theme-retro {
+    --bg-color: #222;
+    --text-color: #f0f0f0;
+    --header-bg: #111;
+    --footer-bg: #000;
+    --accent-color: #00ff00;
+    --card-bg: #333;
+    --border-radius: 0px;
+    --font-main: 'VT323', monospace;
+    --heading-font: 'Press Start 2P', cursive;
+    --border-style: 4px solid #00ff00;
+    --box-shadow: 5px 5px 0px #000;
+}
+
+.theme-retro.mode-dark {
+    --accent-color: #ff00ff;
+    --border-style: 4px solid #ff00ff;
+}
+
+/* --- TERMINAL THEME --- */
+.theme-terminal {
+    --bg-color: #1a1b26;
+    --text-color: #a9b1d6;
+    --header-bg: #24283b;
+    --footer-bg: #16161e;
+    --accent-color: #7aa2f7;
+    --card-bg: #24283b;
+    --border-radius: 4px;
+    --font-main: 'Fira Code', monospace;
+    --heading-font: 'Fira Code', monospace;
+    --border-style: 1px solid #414868;
+    --box-shadow: none;
+}
+
+.theme-terminal.mode-light {
+    --bg-color: #f5f5f5;
+    --text-color: #333;
+    --header-bg: #e0e0e0;
+    --card-bg: #ffffff;
+    --accent-color: #2563eb;
+}
+
+/* --- MASCOT STYLING --- */
+#mascot-container {
+    float: left;
+    margin-right: 20px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mascot-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Cloudy Mascot Animation */
+.theme-cloudy #mascot-img {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Retro Scanlines */
+#retro-scanlines {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(
+        rgba(18, 16, 16, 0) 50%, 
+        rgba(0, 0, 0, 0.1) 50%
+    ), linear-gradient(
+        90deg, 
+        rgba(255, 0, 0, 0.03), 
+        rgba(0, 255, 0, 0.01), 
+        rgba(0, 0, 255, 0.03)
+    );
+    background-size: 100% 4px, 3px 100%;
+    pointer-events: none;
+    z-index: 10000;
+}
+
+.theme-retro #retro-scanlines {
+    display: block;
+}
+
+/* Retro Glowing Text */
+.theme-retro h1, .theme-retro h2 {
+    color: var(--accent-color) !important;
+    text-shadow: 0 0 10px var(--accent-color);
+}
+
+/* Terminal Cursor */
+.theme-terminal #project_title::after {
+    content: "_";
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Improving layout flow */
+.inner {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#header_wrap .inner {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#project_title, #project_tagline {
+    width: calc(100% - 100px);
+}
+
+/* Post List Styling */
+.post-list li {
+    background: var(--card-bg);
+    border: var(--border-style);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-bottom: 25px !important;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.2s;
+}
+
+.post-list li:hover {
+    transform: translateY(-5px);
+}
+
+.post-link {
+    font-family: var(--heading-font);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.post-meta {
+    font-size: 0.8em;
+    opacity: 0.7;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Pagination */
+.pagination {
+    margin: 40px 0;
+    text-align: center;
+    font-family: var(--heading-font);
+}
+
+.pagination a, .pagination span {
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: var(--border-style);
+    border-radius: var(--border-radius);
+    background: var(--card-bg);
+    text-decoration: none;
+}
+
+.pagination a:hover {
+    background: var(--accent-color);
+    color: white !important;
+}
+
+/* --- APPLYING VARIABLES --- */
+
+body {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    font-family: var(--font-main) !important;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+    margin: 0;
+}
+
+#header_wrap {
+    background: var(--header-bg) !important;
+    border-bottom: var(--border-style);
+    padding: 40px 0;
+}
+
+#footer_wrap {
+    background: var(--footer-bg) !important;
+    border-top: var(--border-style);
+}
+
+#main_content {
+    background: var(--card-bg);
+    backdrop-filter: var(--glass-blur);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--box-shadow);
+    border: var(--border-style);
+    margin-top: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color) !important;
+    font-family: var(--heading-font) !important;
+    text-shadow: none !important;
+}
+
+a {
+    color: var(--accent-color) !important;
+}
+
+/* --- THEME SWITCHER UI --- */
+#theme-panel {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.panel-toggle {
+    background: var(--accent-color);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    font-size: 20px;
+}
+
+#theme-panel:hover .panel-content {
+    display: block;
+}
+
+.panel-content {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: var(--border-style);
+    border-radius: 8px;
+    padding: 15px;
+    min-width: 150px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.panel-content h4 {
+    margin: 10px 0 5px 0;
+    font-size: 14px;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+.panel-content button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 5px;
+    border: 1px solid var(--accent-color);
+    background: transparent;
+    color: var(--text-color);
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: left;
+    font-family: var(--font-main);
+    transition: all 0.2s;
+}
+
+.panel-content button:hover {
+    background: var(--accent-color);
+    color: white;
+}
+
+/* Retro specific button feel */
+.theme-retro .panel-content button {
+    border: 2px solid var(--accent-color);
+    text-transform: uppercase;
+}
+
+/* Navbar overrides */
+ul.navbar {
+    background-color: transparent !important;
+    border: var(--border-style);
+    border-radius: var(--border-radius);
+}
+
+ul.navbar li a {
+    color: var(--text-color) !important;
+}
+
+ul.navbar li.active, ul.navbar li a:hover {
+    background-color: var(--accent-color) !important;
+    color: white !important;
+}
+
+#theNavbar {
+    position: relative !important;
+    width: auto !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    margin-top: 20px;
+}
