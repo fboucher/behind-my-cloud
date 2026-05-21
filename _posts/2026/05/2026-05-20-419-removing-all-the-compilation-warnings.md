@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Removing all the compilation warnings
-featured-image: https://img.youtube.com/vi/bX7j-86W81k/hqdefault.jpg
+featured-image: https://img.youtube.com/vi/17ein_mUaZ4/hqdefault.jpg
 date: 2026-05-20  06:30 -0500
 categories:  2d6-dungeon-app
 ---
@@ -14,7 +14,7 @@ In this stream, we focused on cleaning up the 2D6 Dungeon App by removing compil
 
 ## Replay
 
-{% include youtube.html id="bX7j-86W81k" %}
+{% include youtube.html id="17ein_mUaZ4" %}
 
 <br/><!--more-->
 
