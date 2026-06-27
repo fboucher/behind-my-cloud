@@ -9,7 +9,7 @@ categories:  NoteBookmark
 ## Summary
 In this session, Frank dove into the .NET MAUI version of NoteBookmark, focusing on creating a settings page that allows the mobile app to point to a custom API URL for offline synchronization. He experimented with Kepler and GitHub Copilot's auto-agent to manage tasks across different worktrees, though he spent a good chunk of the stream troubleshooting a very "chatty" CB bot that got stuck in a feedback loop. Beyond the code, the vibe was lively as the community brainstormed ideas for a new slingshot-style chat game and shared a few laughs over "Dungeon Crawler Carl" and the challenges of surviving a summer heatwave.
 
-📺 - Twitch archive - stream no. 429
+📺 - Twitch archive - stream no. 428
 
 
 ## Replay
@@ -47,8 +47,5 @@ All the code for this project is available on GitHub: NoteBookmark - https://git
 
 ### Notes/ References / Snippets
 
-- we just got raided
-- we just got raided
-- is this a note?
-- Frank was convinced to read Mark Russinovich’s books
+- we just got raided @aaoa_
 - Frank has been convinced to read Mark Russinovich’s books
