@@ -3,7 +3,7 @@ layout: post
 title: Project Update, maintenance and other things
 featured-image: https://img.youtube.com/vi/eYj8jtwU3zE/hqdefault.jpg
 date: 2026-09-23  06:30 -0500
-categories:  azUrlShortener
+categories:  2d6-dungeon-app
 ---
 
 ## Summary
@@ -20,7 +20,7 @@ In this stream, Frank returns after a travel break and a case of the "FM voice" 
 
 ### Project
 
-All the code for this project is available on GitHub: azUrlShortener - https://github.com/FBoucher/azUrlShortener
+All the code for this project is available on GitHub: azUrlShortener - https://github.com/FBoucher/2d6-dungeon-app
 
 ### Game Results
 
