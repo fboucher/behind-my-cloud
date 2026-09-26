@@ -20,7 +20,7 @@ In this stream, Frank returns after a travel break and a case of the "FM voice" 
 
 ### Project
 
-All the code for this project is available on GitHub: azUrlShortener - https://github.com/FBoucher/2d6-dungeon-app
+All the code for this project is available on GitHub: 2D6 Dungeon App - https://github.com/FBoucher/2d6-dungeon-app
 
 ### Game Results
 
