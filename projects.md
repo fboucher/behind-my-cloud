@@ -19,6 +19,7 @@ This repository is to keep tracks of all work done on the stream (aka [https://w
 - [AzUrlShortener](#azurlshortener)
 - [Az Subscription Cleaner](#az-subscription-cleaner)
 - [Blind2021 (aka Project Dover)](#blind2021)
+- [chatacombs](#catacombs)
 - [CheckInDoc MCP](#check-in-doc-mcp)
 - [CloudBot](#cloudbot)
 - [Frame Fisher](#frame-fisher)
@@ -92,6 +93,33 @@ An simple and easy budget friendly Url Shortener for anyone. It runs in Azure (M
 
 ---
 
+
+
+
+---
+
+<h3 id="catacombs">chatacombs</h3>[🔝](#projectlist)
+
+A weekend project — a chat-based dungeon crawler game built with AI.
+
+🔗 [https://github.com/FBoucher/chatacombs](https://github.com/FBoucher/chatacombs)
+
+<table>
+<thead>
+  <tr>
+    <th style="width:85px">Date</th>
+    <th>Title</th>
+  </tr>
+</thead>
+    {% for post in site.categories["catacombs"] %}
+    <tr>
+        <td> {{ post.date | date: "%F" }} </td>
+        <td> 
+            <a href="{{ post.url | relative_url }}" class="post-link"> {{ post.title }} </a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
 
 <h3 id="triavia">Triavia the Trivia game</h3>[🔝](#projectlist)
 
