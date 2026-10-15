@@ -16,6 +16,8 @@ In this milestone 450th stream, Frank dove into his new weekend project, Chataco
 
 {% include youtube.html id="V6fbiijFFTo" %}
 
+{% include youtube.html id="WSLLrVNlhG8" %}
+
 <br/><!--more-->
 
 ### Project
