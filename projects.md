@@ -19,7 +19,7 @@ This repository is to keep tracks of all work done on the stream (aka [https://w
 - [AzUrlShortener](#azurlshortener)
 - [Az Subscription Cleaner](#az-subscription-cleaner)
 - [Blind2021 (aka Project Dover)](#blind2021)
-- [Catacombs](#catacombs)
+- [chatacombs](#catacombs)
 - [CheckInDoc MCP](#check-in-doc-mcp)
 - [CloudBot](#cloudbot)
 - [Frame Fisher](#frame-fisher)
@@ -98,7 +98,7 @@ An simple and easy budget friendly Url Shortener for anyone. It runs in Azure (M
 
 ---
 
-<h3 id="catacombs">Catacombs</h3>[🔝](#projectlist)
+<h3 id="catacombs">chatacombs</h3>[🔝](#projectlist)
 
 A weekend project — a chat-based dungeon crawler game built with AI.
 
