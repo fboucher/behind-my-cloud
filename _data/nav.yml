@@ -1,11 +1,14 @@
 - title: "Home"
   href: "/"
 
-- title: "Archive"
+- title: "Streams"
   href: "/archive/"
 
 - title: "Projects"
   href: "/projects/"
+
+- title: "Workbench"
+  href: "https://github.com/users/fboucher/projects/15"
 
 - title: "About"
   href: "/about/"
