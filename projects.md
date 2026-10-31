@@ -6,7 +6,7 @@ permalink: /projects/
 
 # Stream Projects
 
-This repository is to keep tracks of all work done on the stream (aka [https://www.twitch.tv/fboucheros](https://www.twitch.tv/fboucheros)). The complete list of the streams is available in the journal, here are those where I we worked on a specific project.
+Everything here is built live, in the open. Streams are broadcast simultaneously on [Twitch](https://www.twitch.tv/fboucheros) and [YouTube](https://www.youtube.com/@behindmycloud); once the stream ends, the recording stays available on YouTube only. The full list of streams is in the journal; below are the streams grouped by the project we worked on. All projects are open-source.
 
 ![Stream_Screenshots][Stream_Screenshots]
 
