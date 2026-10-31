@@ -1,10 +1,12 @@
 ---
 layout: default
-title: Archive
+title: Streams
 permalink: /archive/
 ---
 
-<h2>Archive</h2>
+<h2>Streams</h2>
+
+<p>Every stream, newest first.</p>
 
 {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'"  %}
 {% for curYear in postsByYear %}
