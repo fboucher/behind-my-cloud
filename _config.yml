@@ -1,7 +1,7 @@
 theme: jekyll-theme-slate
 title: Behind my Cloud
 description: > # this means to ignore newlines until "baseurl:"
-  Projects that we work on the stream (aka Twitch.com/fboucheros)
+  Live coding on Twitch and YouTube. Open-source projects, built in public.
 twitter_username: fboucheros
 github_username: fboucher
 url: https://behindmycloud.com
