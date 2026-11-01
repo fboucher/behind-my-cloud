@@ -19,15 +19,17 @@ Everything here is built live, in the open. Streams are broadcast simultaneously
 - [AzUrlShortener](#azurlshortener)
 - [Az Subscription Cleaner](#az-subscription-cleaner)
 - [Blind2021 (aka Project Dover)](#blind2021)
-- [chatacombs](#catacombs)
+- [chatacombs](#chatacombs)
 - [CheckInDoc MCP](#check-in-doc-mcp)
 - [CloudBot](#cloudbot)
 - [Frame Fisher](#frame-fisher)
+- [Kanban DMZ](#kanban-dmz)
 - [Learning](#learning)
 - [Local AI Search](#local-ai-search)
 - [OSS Maintenance](#maintenance)
 - [MyClippings-Parser](#myclippings-parser)
 - [My GPX Activities](#my-gpx-activities)
+- [n8n Buildind Data PLatform (BDP)](#n8n-bdp)
 - [n8n-nodes-reka](#n8n-nodes-reka)
 - [NoteBookmark](#NoteBookmark)
 - [Not-a-Dog-Workshop](#not-a-dog-workshop)
@@ -98,9 +100,9 @@ An simple and easy budget friendly Url Shortener for anyone. It runs in Azure (M
 
 ---
 
-<h3 id="catacombs">chatacombs</h3>[🔝](#projectlist)
+<h3 id="chatacombs">chatacombs</h3>[🔝](#projectlist)
 
-A weekend project — a chat-based dungeon crawler game built with AI.
+A weekend project — a chat-based dungeon crawler game built with AI. The idea came as I was exploring different side activities the audience could do while watching the live stream: Chat + catacombs ==> chatacombs! 
 
 🔗 [https://github.com/FBoucher/chatacombs](https://github.com/FBoucher/chatacombs)
 
@@ -111,7 +113,7 @@ A weekend project — a chat-based dungeon crawler game built with AI.
     <th>Title</th>
   </tr>
 </thead>
-    {% for post in site.categories["catacombs"] %}
+    {% for post in site.categories["chatacombs"] %}
     <tr>
         <td> {{ post.date | date: "%F" }} </td>
         <td> 
@@ -654,8 +656,6 @@ Custom n8n nodes to use Reka's AI in our workflows.
 </table>
 
 
-
-
 ---
 
 <h3 id="my-gpx-activities">my GPX Activities</h3>[🔝](#my-gpx-activities)
@@ -707,6 +707,60 @@ A project to manage medias (images & videos) locally using AI.
     {% endfor %}
 </table>
 
+
+
+---
+
+<h3 id="n8n-bdp">n8n bdp</h3>[🔝](#n8n-bdp)
+
+A n8n full integration for Building Daya Platform (BDP) from Schneider Electric. 
+
+ 🔗 [https://github.com/fboucher/n8n-bdp](https://github.com/fboucher/n8n-bdp)
+
+<table>
+  <thead>
+    <tr>
+      <th style="width:90px">Date</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+    {% for post in site.categories["n8n-bdp"] %}
+    <tr>
+        <td> {{ post.date | date: "%F" }} </td>
+        <td> 
+            <a href="{{ post.url | relative_url }}" class="post-link"> {{ post.title }} </a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+---
+
+<h3 id="kanban-dmz">Kanban DMZ</h3>[🔝](#kanban-dmz)
+
+A secure, visual project board featuring public and private visibility zones (DMZ), configurable columns, card categories, and built-in OIDC authentication.
+
+ 🔗 [https://github.com/fboucher/kanban-dmz](https://github.com/fboucher/kanban-dmz)
+
+<img src="https://github.com/fboucher/kanban-dmz/raw/main/docs/images/kanban-dmz_board.png" alt="new adventure screen" width="400"/>
+
+<table>
+  <thead>
+    <tr>
+      <th style="width:90px">Date</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+    {% for post in site.categories["kanban-dmz"] %}
+    <tr>
+        <td> {{ post.date | date: "%F" }} </td>
+        <td> 
+            <a href="{{ post.url | relative_url }}" class="post-link"> {{ post.title }} </a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
 
 
 
