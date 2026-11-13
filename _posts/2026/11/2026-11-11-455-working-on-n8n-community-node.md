@@ -7,6 +7,7 @@ categories:  n8n-nodes-bdp
 ---
 
 ## Summary
+In this stream, Frank made great progress on his n8n community node for the Schneider Electric Building Data Platform, successfully validating everything from basic building lists to complex, nested GraphQL queries. He showcased his workflow using Kepler and Claude to manage tasks and PRs, navigating through some initial npm "quirks" to get the environment running smoothly. The session had a high-energy, collaborative vibe, highlighted by a massive 10-sub gift bomb from Stony Eagle and plenty of chat about new developer tools like the Passenger IDE.
 
 📺 - Twitch archive - stream no. 455
 
